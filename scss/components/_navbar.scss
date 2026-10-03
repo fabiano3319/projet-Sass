@@ -1,0 +1,78 @@
+@use "../variables" as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0 80px;
+  background-color: $white;
+
+  &__burger {
+    display: none;
+  }
+  
+  &__logo a {
+    font-size: 28px;
+    font-weight: 600;
+    color: $secondary-color;
+    text-decoration: none;
+  }
+
+  &__logo-dot {
+    color: $orange;
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 14px;
+      font-weight: 400;
+
+      &.active {
+        text-decoration: underline $orange;
+        text-underline-offset: 10px;  
+        color: $secondary-color;
+        font-weight: 600;
+      }
+
+      &:hover:not(.active) {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__search {
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+
+  &__frame {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #073C3518;
+    vertical-align: middle;
+  }
+
+  &__lang {
+    font: {
+      size: 13px;
+      weight: 600;
+    }
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}
