@@ -1,0 +1,97 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.about {
+    padding: $section-padding;
+    background-color: #F1F3F5;
+
+    &__split {
+        @include flex-row;
+    }
+
+    &__image {
+        flex: 1;
+        min-width: 0;
+
+        img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 32px;
+        }
+    }
+    
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        flex: 1;
+        min-width: 0;
+
+        p.desc {
+            font: {
+                weight: 400;
+                size: 16px;
+            }
+            line-height: 1.7;
+            color: $gray;
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        gap: 8px;
+
+        h5 {
+            @include title;
+        }
+
+        .line {
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            background-color: $violet;
+        }
+    }
+
+    h2 {
+        @include description;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__frame {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+        p.number {
+            font: {
+                size: 48px;
+                weight: 700;
+            }
+            color: $black;
+        }
+
+        .stat-tile {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 296px;
+        }
+
+         p.text {
+            color: $gray;
+            font: {
+                weight: 500;
+                size: 14px;
+            }
+        }
+    }
+}
