@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+nav a,.navbar__lang,
+h5{
+  font-family: $font-primary;
+}
+
+.hero h1,p,button,
+.about h2,p,
+.services p,a,
+.card-upper p,
+.cta h2,p,
+.footer__brand p,
+.footer a{
+  font-family: $font-secondary;
+}
+
+.hero h6,
+.about p.text,
+.job-title,
+.cta button {
+  font-family: $font-accent;
+}
+
+.number, 
+.username,
+h4 {
+  font-family: $font-outfit;
+}
