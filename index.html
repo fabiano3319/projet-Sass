@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picarial-homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="navbar__logo">
+                <a href="#">Picarial<span class="navbar__logo-dot">.</span></a>
+            </div>
+
+            <ul class="navbar__links" id="navbar-links">
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Témoignages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <button class="navbar__search" aria-label="Rechercher">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <span class="navbar__frame"></span>
+                <div class="navbar__lang">FR / EN</div>
+
+                <button class="navbar__burger" id="navbar-burger"
+                        aria-label="Ouvrir le menu"
+                        aria-expanded="false"
+                        aria-controls="navbar-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__left">
+            <div class="hero__tag">
+                <h6>Studio de création digitale à Madagascar</h6>
+            </div>     
+            <h1>Nous créons des expériences digitales.</h1>
+            <p>Picarial accompagne les marques ambitieuses dans leur transformation digitale - stratégie, design, développement.</p>
+            <div class="hero__actions">
+                <button class="btn-primary">Découvrir nos projets 
+                    <span>
+                        <img src="assets/icons/chevron-right.svg" alt="">
+                    </span>
+                </button>
+                <button class="btn-outline">Nous contacter</button>
+            </div>
+        </div>
+        <div class="hero__right">
+            <img src="assets/images/hero-right.png" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about__split">
+            <div class="about__image">
+                <img src="assets/images/Rectangle.png" alt="">
+            </div>
+            <div class="about__text">
+                <div class="about__title">
+                    <span class="line"></span>
+                    <h5>à propos de picarial</h5>
+                </div>
+                <h2>Créateurs de valeur numérique depuis 2018.</h2>
+                <p class="desc">Depuis 2018, nous sommes une équipe passionnée de designers, développeurs et stratèges digitaux. Notre mission : transformer vos idées en expériences numériques mémorables. Nous croyons en l'alliance parfaite de l'esthétique et de la performance.</p>
+                <div class="about__stats">
+                    <div class="about__frame">
+                        <div class="stat-tile">
+                            <p class="number">150+</p>
+                            <p class="text">Projets livrés</p>
+                        </div>
+                        <div class="stat-tile">
+                            <p class="number">45+</p>
+                            <p class="text">Clients satisfaits</p>
+                        </div>
+                    </div>
+                    <div class="about__frame">
+                        <div class="stat-tile">
+                            <p class="number">8</p>
+                            <p class="text">Années d'expérience</p>
+                        </div>
+                        <div class="stat-tile">
+                            <p class="number">12</p>
+                            <p class="text">Experts créatifs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services__intro">
+            <h5>nos services</h5>
+            <p>Des solutions complètes pour votre présence digitale</p>
+        </div>
+        <div class="services__grid">
+             <div class="row">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <img src="assets/icons/paintbrush-2.svg" alt="">
+                    </div>
+                    <div class="service-content">
+                        <p class="title">Design UI/UX</p>
+                        <p class="desc">Interfaces intuitives et esthétiques qui convertissent vos visiteurs en clients. Recherche utilisateur poussée et prototypes interactifs de haute fidélité.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#">
+                            En savoir plus
+                            <img src="assets/icons/arrow-right.svg" alt="">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <img src="assets/icons/code.svg" alt="">
+                    </div>
+                    <div class="service-content">
+                        <p class="title">Développement Web</p>
+                        <p class="desc">Sites performants, sécurisés et sur-mesure avec les technologies les plus récentes. Développement adapté à vos flux de travail et optimisé pour le référencement.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#">
+                            En savoir plus
+                            <img src="assets/icons/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <img src="assets/icons/chart-column-increasing.svg" alt="">
+                    </div>
+                    <div class="service-content">
+                        <p class="title">Stratégie Digitale</p>
+                        <p class="desc">Plans d'action data-driven pour maximiser votre impact en ligne. Positionnement de marque, SEO technique, et accompagnement stratégique sur le long terme.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#">
+                            En savoir plus
+                            <img src="assets/icons/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <img src="assets/icons/award.svg" alt="">
+                    </div>
+                    <div class="service-content">
+                        <p class="title">Branding & Identité</p>
+                        <p class="desc">Identités visuelles fortes qui racontent l'histoire de votre marque. Logotype, charte graphique complète et direction artistique de haut niveau.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#">
+                            En savoir plus
+                            <img src="assets/icons/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonials__intro">
+            <h5>témoignages</h5>
+            <p>Ce que disent nos clients</p>
+        </div>
+        <div class="testimonials__row">
+            <div class="testimonial-card">
+                <div class="card-upper">
+                    <img src="assets/icons/quote.svg" alt="">
+                    <p>« Picarial a transformé notre vision en un site web qui dépasse toutes nos attentes. Leur créativité est sans limites. »</p>
+                </div>
+                <div class="card-user">
+                    <img src="assets/images/user.png" alt="">
+                    <div class="user-info">
+                        <p class="username">Marie Dupont</p>
+                        <p class="job-title">CEO de LuxeVert</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="card-upper">
+                    <img src="assets/icons/quote.svg" alt="">
+                    <p>« Une équipe réactive, professionnelle et créative. Notre taux de conversion a augmenté de 40% depuis la refonte. »</p>
+                </div>
+                <div class="card-user">
+                    <img src="assets/images/user-2.png" alt="">
+                    <div class="user-info">
+                        <p class="username">Thomas Laurent</p>
+                        <p class="job-title">Directeur Marketing, TechNova</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="card-upper">
+                    <img src="assets/icons/quote.svg" alt="">
+                    <p>« Le meilleur investissement digital que nous ayons fait. Picarial comprend vraiment les besoins de ses clients. »</p>
+                </div>
+                <div class="card-user">
+                    <img src="assets/images/user-3.png" alt="">
+                    <div class="user-info">
+                        <p class="username">Sophie Martin</p>
+                        <p class="job-title">Fondatrice de BelleAura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="projets">
+        <div class="cta__content">
+            <div class="frame-one">
+                <h2>Prêt à donner vie à vos ambitions digitales ?</h2>
+                <p>Discutons de votre projet et construisons ensemble la solution idéale pour votre entreprise.</p>
+            </div>
+            <div class="frame-two">
+                <button class="btn-primary">
+                    Démarrer un projet 
+                    <img src="assets/icons/arrow-up-right.svg" alt="">
+                </button>
+                <button class="btn-secondary">Consulter nos tarifs</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer__upper">
+            <div class="footer__brand">
+                <div class="logo">
+                    <img src="assets/icons/Ellipse.svg" alt="icon-ellipse">
+                    <h4>Picarial</h4>
+                </div>
+                <p>Expériences digitales mémorables et créatrices de valeur. Basé en France, disponible dans le monde entier.</p>
+            </div>
+            <div class="footer__link-group">
+                <ul class="col">
+                    <li><a href="#" class="uppercase">navigation</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                </ul>
+                <ul class="col">
+                    <li><a href="#contact" class="uppercase">contact</a></li>
+                    <li><a href="">hello@picarial.com</a></li>
+                    <li><a href="">+261 34 37 811 43</a></li>
+                    <li><a href="">Antananarivo, Madagascar</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer__lower">
+            <p>© 2025 Picarial. Tous droits réservés.</p>
+            <div class="legal">
+                <p>Mentions légales</p>
+                <p>Politique de confidentialité</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

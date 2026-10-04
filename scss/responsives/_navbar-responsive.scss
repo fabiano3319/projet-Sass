@@ -1,0 +1,114 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// ===== Burger (styles de base) =====
+.navbar {
+  position: relative; // référence pour le menu déroulant
+
+  &__burger {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      height: 2px;
+      background-color: $secondary-color;
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $orange;
+      outline-offset: 2px;
+    }
+
+    &[aria-expanded="true"] {
+      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  }
+
+  &__lang {
+    white-space: nowrap;
+  }
+
+  &__search {
+    cursor: pointer;
+  }
+}
+
+// ===== Tablette (≤ 1024px) : menu burger =====
+@include respond("tablet") {
+  .navbar {
+    padding: 0 40px;
+
+    &__burger {
+      display: flex;
+    }
+
+    &__links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 40px 24px;
+      background-color: $white;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+      &.is-open {
+        display: flex;
+      }
+
+      a {
+        display: block;
+        padding: 16px 0;
+        font-size: 16px;
+
+        &.active {
+          text-underline-offset: 6px;
+        }
+      }
+    }
+  }
+}
+
+// ===== Mobile (≤ 768px) =====
+@include respond("mobile") {
+  .navbar {
+    height: 72px;
+    padding: 0 24px;
+
+    &__logo a {
+      font-size: 24px;
+    }
+
+    &__links {
+      padding: 8px 24px 24px;
+    }
+
+    &__actions {
+      gap: 16px;
+    }
+  }
+}
+
+// ===== Petit mobile (≤ 480px) =====
+@include respond("small") {
+  .navbar {
+    &__frame {
+      display: none;
+    }
+  }
+}

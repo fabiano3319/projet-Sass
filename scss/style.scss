@@ -1,0 +1,23 @@
+// scss/style.scss
+@use "variables";
+@use "mixins";
+@use "reset";
+@use "typography";
+
+// Composants
+@use "components/navbar";
+@use "components/hero";
+@use "components/about";
+@use "components/services";
+@use "components/testimonials";
+@use "components/cta";
+@use "components/footer";
+
+// Responsive 
+@use "responsives/navbar-responsive";
+@use "responsives/hero-responsive";
+@use "responsives/about-responsive";
+@use "responsives/services-responsive";
+@use "responsives/testimonials-responsive";
+@use "responsives/cta-responsive";
+@use "responsives/footer-responsive";

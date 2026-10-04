@@ -1,0 +1,93 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// ===== Tablette (≤ 1024px) : image au-dessus, texte en dessous =====
+@include respond("tablet") {
+  .about {
+    padding: 64px 40px;
+
+    &__split {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 48px;
+    }
+
+    &__image {
+      flex: none;
+      width: 100%;
+
+      img {
+        max-height: 480px;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      flex: none;
+      width: 100%;
+    }
+
+    // remplace le width: 296px fixe
+    &__frame {
+      gap: 24px;
+
+      .stat-tile {
+        flex: 1;
+        width: auto;
+      }
+    }
+  }
+}
+
+// ===== Mobile (≤ 768px) =====
+@include respond("mobile") {
+  .about {
+    padding: 48px 24px;
+
+    &__split {
+      gap: 32px;
+    }
+
+    &__image img {
+      max-height: 360px;
+      border-radius: 24px;
+    }
+
+    &__text {
+      gap: 24px;
+    }
+
+    &__stats {
+      gap: 24px;
+    }
+
+    &__frame {
+      gap: 16px;
+
+      p.number {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+// ===== Petit mobile (≤ 480px) =====
+@include respond("small") {
+  .about {
+    padding: 40px 20px;
+
+    &__image img {
+      max-height: 280px;
+    }
+
+    &__frame {
+      p.number {
+        font-size: 32px;
+      }
+
+      p.text {
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+    @include flex-column;
+    padding: 80px 96px 40px 96px;
+    background-color: #F8F9FA;
+
+    &__upper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $footer-width;
+    }
+
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 320px;
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+
+            h4 {
+                font: {
+                    weight: 800;
+                    size: 24px;
+                }
+                color: $black;
+            }
+        }
+
+        p {
+            font: {
+                weight: 400;
+                size: 14px;
+            }
+            line-height: 1.6;
+            color: $gray;
+        }
+    }
+
+    &__link-group {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                font: {
+                    weight: 400;
+                    size: 14px;
+                }
+                color: $gray;
+            }
+
+            .uppercase {
+                font: {
+                    weight: 700;
+                    size: 14px;
+                }
+                text-transform: uppercase;
+                color: $black;
+            }
+        }
+    }
+
+    hr {
+        width: 100%;
+        max-width: $footer-width;
+        border: 1px solid #E9ECEF;
+    }
+
+    &__lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: $footer-width;
+
+        p {
+            font: {
+                weight: 400;
+                size: 13px;
+            }
+            color: #868E96;
+        }
+
+        .legal {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
+
+}
